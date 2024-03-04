@@ -1,0 +1,381 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Groceries</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+
+
+
+
+<!-- ******************************** Header ******************************** -->
+    <div id="upperBar">
+        <h6>use code FREESHIP for free shipping</h6>
+    </div>
+    <div class="grid-container">
+
+
+        <div class="grid-x grid-padding-x header">
+            <!-- <div class="large-12 cell"> -->
+            <!-- Green Grocer Logo -->
+            <div class="large-4 medium-4 small-12 logoBox">
+                <a href="index.html">
+                    <img class="logo" src="images/logo.svg" alt="">
+                </a>
+            </div>
+            <div class="large-8 medium-8 small-12">
+                <div class="grid-x">
+                    <div id="upperRight" class="large-12 medium-12 small-12">
+                        <div class="search large-10">
+                            <input type="text" id="search" placeholder="Produce, Apples, Etc.">
+                        </div>
+                        <!--large-10-->
+                        <div id="icon">
+                            <img data-open="cart" id="cartIcon" src="images/cart.svg" alt="">
+                            <div class="cartCircle">0</div>
+
+                        </div>
+                    </div>
+                    <!--large-12-->
+            <!-- ******************************** Nav ******************************** -->
+                    <div>
+                        <div class="nav">
+                            <div class="top-bar" id="example-menu">
+                                <div class="top-bar-left">
+                                    <ul class=" dropdown menu" data-dropdown-menu>
+
+                                        <li>
+                                            <a class="getProductsByDepartment" data-id="26">Produce</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Refrigerated</a>
+                                            <ul class="vertical menu nested ul_department_list">
+                                                <li class="getProductsByDepartment" data-id="20"><a>Milk & Dairy</a></li>
+                                                <li class="getProductsByDepartment" data-id="10"><a>Dairy Substitute</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="getProductsByDepartment" data-id="2">Bread</a>
+                                        </li>
+                                        <li>
+                                            <a class="getProductsByDepartment" data-id="15">Frozen</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Aisle</a>
+                                            <ul class="vertical menu nested ul_department_list">
+                                                <li class="getProductsByDepartment" data-id="5"><a>Canned Food</a></li>
+                                                <li class="getProductsByDepartment" data-id="7"><a>Cleaning Supplies</a></li>
+                                                <li class="getProductsByDepartment" data-id="9"><a>Condiments & Sauces</a></li>
+                                                <li class="getProductsByDepartment" data-id="16"><a>Conditioner</a></li>
+                                                <li class="getProductsByDepartment" data-id="13"><a>Drinks and Snacks</a></li>
+                                                <li class="getProductsByDepartment" data-id="18"><a>Health & Beauty</a></li>
+                                                <li class="getProductsByDepartment" data-id="21"><a>Nutritional Bars & Drinks</a></li>
+                                                <li class="getProductsByDepartment" data-id="22"><a>Nuts</a></li>
+                                                <li class="getProductsByDepartment" data-id="23"><a>Paper and Plastic</a></li>
+                                                <li class="getProductsByDepartment" data-id="24"><a>Pasta</a></li>
+                                                <li class="getProductsByDepartment" data-id="25"><a>Pet Supplies</a></li>
+                                                <li class="getProductsByDepartment" data-id="27"><a>Sauces</a></li>
+                                                <li class="getProductsByDepartment" data-id="17"><a>Shampoo</a></li>
+                                                <li class="getProductsByDepartment" data-id="32"><a>Tea & Coffee</a></li>
+                                                <li class="getProductsByDepartment" data-id="33"><a>Vitamins & Supplements</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">Meat</a>
+                                            <ul class="vertical menu nested ul_department_list">
+                                                <li class="getProductsByDepartment" data-id="11"><a>Deli</a></li>
+                                                <li class="getProductsByDepartment" data-id="19"><a>Meat & Poultry</a></li>
+                                                <li class="getProductsByDepartment" data-id="28"><a>Seafood</a></li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--large-12-->
+                </div>
+                <!--grid-x-->
+            </div><!--large-8-->
+
+            <div class="title-bar large-8" data-responsive-toggle="example-menu" data-hide-for="medium">
+                <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+                
+            </div><!-- large-8-->
+        </div> <!-- grid-x -->
+<!-- ******************************** Banner ******************************** -->
+        <div class="grid-x">
+            <div class="large-12 medium-12 small-12">
+                <div class="banner">
+                    <hr>
+                    <img src="images/banner.svg" alt="">
+                </div>
+            </div>
+            <!--large-12-->
+        </div>
+        <!--grid-x-->
+
+        
+        <div class="grid-x grid-padding-x productList">
+        </div>
+<!-- **************************** Shop by Department **************************** -->
+<div class="grid-container">        
+<div class="grid-x grid-padding-x hide_all department_container" >
+            <div class="large-12 medium-12 small-12 cell">
+                <h1 class="heading">Shop by Department</h1>
+                <div class="grid-x grid-padding-x">
+                    <div class="large-4 medium-4 small-12 cell collectionCard">
+                        <a href="#">
+                            <div class="primary collection getProductsByDepartment" id="dairy" data-id="20">
+                                <h4>Dairy</h4>
+
+                            </div>
+                        </a>
+                    </div>
+                    <!--large-4-->
+                    <div class="large-4 medium-4 small-12 cell collectionCard">
+                        <a href="#">
+                            <div class="primary collection getProductsByDepartment" id="produce" data-id="26">
+                                <h4>Produce</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <!--large-4-->
+                    <div class="large-4 medium-4 small-12 cell collectionCard">
+                        <a href="#">
+                            <div class="primary collection getProductsByDepartment" id="bread" data-id="2">
+                                <h4>Bread</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <!--large-4-->
+                </div>
+                <!--grid-x-->
+                <div class="grid-x grid-padding-x">
+                    <div class="large-4 medium-4 small-12 cell collectionCard">
+                        <a href="#">
+                            <div class="primary collection getProductsByDepartment" id="frozen" data-id="15">
+                                <h4>Frozen Food</h4>
+
+                            </div>
+                        </a>
+                    </div>
+                    <!--large-4-->
+                    <div class="large-4 medium-4 small-12 cell collectionCard">
+                        <a href="#">
+                            <div class="primary collection getProductsByDepartment" id="aisles" data-id="5">
+                                <h4>Aisles</h4>
+
+                            </div>
+                        </a>
+                    </div>
+                    <!--large-4-->
+                    <div class="large-4 medium-4 small-12 cell collectionCard">
+                        <a href="#">
+                            <div class="primary collection getProductsByDepartment" id="meat" data-id="19">
+                                <h4>Meat</h4>
+
+                            </div>
+                        </a>
+                    </div>
+                    <!--large-4-->
+                </div>
+                <!--grid-x-->
+            </div>
+            <!--large-12-->
+            <!-- **************************** Flyer **************************** -->
+            <div class="large-12 medium-12 small-12 cell" id="flyerSection">
+                <h1>Weekly Flyer</h1>
+                <div class="large-12 medium-12 small-12">
+                    <div class="flyer">
+                        <img src="images/flyer.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--grid-x-->
+    </div> <!--grid-container-->
+
+
+    </div>
+    <!--grid-container-->
+<!-- ******************************** Footer ******************************** -->
+<div class="large-12 footer">
+    Green Grocer&copy; <script>   document.write( new Date().getFullYear() );</script>
+        <div id="social">
+            <a href="https://www.instagram.com" target="_blank"><img class="social" src="images/insta.svg" alt=""></a>
+            <a href="https://www.facebook.com" target="_blank"><img class="social" src="images/facebook.svg" alt=""></a>
+            <a href="https://www.twitter.com" target="_blank"><img class="social" src="images/twitter.svg" alt=""></a>
+        </div>
+    </div>
+    <!--large-12-->
+
+    <div class="cart_wrapper" data-closable>
+        <div class="cart_border">
+            <button class="close-button" aria-label="Close alert" type="button" data-close>
+                <img src="images/close.svg" alt="Close Symbol" id="close">
+                </button>
+            <div class="grid-container cart_data">
+                <div class="grid-x grid-padding-x">
+                    <div class="large-1 cell">
+                    </div>
+                    <div class="large-6 cell">ITEM
+                    </div>
+                    <div class="large-1 cell">QUANTITY
+                    </div>
+                    <div class="large-2 cell">PRICE
+                    </div>
+                    <div class="large-2 cell">EXTENDED PRICE
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout">
+                <input id="guest" type="button" value="Signout as Guest">
+                <input id="login" type="button" value="Login">
+                <input id="createAccount" type="button" value="Create Account">
+
+                <div class="login hideAll">
+                    <form id="loginForm">
+                        Email:<br>
+                        <input id="username" name="username" type="text" value="name@email.ca"><br>
+                        Password:<br>
+                        <input id="password" name="password" type="password" value="password"><br>
+                        <input id="loginOK" type="button" value="GO">
+                    </form>
+                </div>
+
+                <div class="createAccount hideAll">
+                    <form id="createAccountForm">
+                        Email:<br>
+                        <input id="ca_username" name="username" type="text" value=""><br>
+                        Password:<br>
+                        <input id="ca_password" name="password" type="password" value=""><br>
+                        Password Again:<br>
+                        <input id="ca_password2" name="password2" type="password" value=""><br>
+                        <input id="ca_loginOK" type="button" value="Create">
+
+                        <br><br>
+
+                        First Name:<br>
+                        <input id="ca_name_first" name="name_first" type="text" value=""><br>
+                        Last Name:<br>
+                        <input id="ca_name_last" name="name_last" type="text" value=""><br>
+
+                        <!-- all other fields -->
+                    </form>
+                </div>
+
+                <div class="shippingAndBilling hideAll">
+                    <form id="shippingAndBillingForm">
+                        Email:<br>
+                        <input id="ca_username" name="username" type="text" value=""><br>
+
+                        <input id="ea_user_id" name="ea_user_id" type="hidden" value=""><br>
+                        <br><br>
+                        <div class="grid-x">
+                            <div class="billing large-6 cell">
+                                <label for="billing_name_first">First Name:</label>
+                                <input id="billing_name_first" name="billing_name_first" type="text" value=""><br>
+                                Last Name:<br>
+                                <input id="billing_name_last" name="billing_name_last" type="text" value=""><br>
+                            </div>
+
+                            <div class="shipping large-6 cell">
+                                First Name:<br>
+                                <input id="shipping_name_first" name="shipping_name_first" type="text" value=""><br>
+                                Last Name:<br>
+                                <input id="shipping_name_last" name="shipping_name_last" type="text" value=""><br>
+                            </div>
+                        </div>
+
+                        <input id="go_to_three" type="button" value="Continue">
+
+                        <input id="transaction_code" type="hidden" name="transaction_code" value="">
+
+                        <div class="products_to_purchase">
+                            <input name="myCart[765]" type="hidden" value="1">
+                            <input name="myCart[766]" type="hidden" value="4">
+                            <input name="myCart[75]" type="hidden" value="2">
+                        </div>
+
+                        <!-- all other fields -->
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- screen three -->
+
+            <div class="payment hideAll">
+                <form id="paymentForm">
+                    Payment:<br>
+
+                    <div class="grid-x">
+                        <div class="billing large-6 cell">
+                            <label for="card_holder_name">Card Holder Name:</label>
+                            <input id="card_holder_name" name="card_holder_name" type="text" value="">
+                            <label for="card_number">Card Number:</label>
+                            <input id="card_number" name="card_number" type="text" value="">
+                            <label for="">Expiry Date:</label>
+                            <select name="month">
+                                <option value="month">Select a Month</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <select name="year">
+                                <option value="year">Select a Year</option>
+                                <option value="20">2020</option>
+                                <option value="21">2021</option>
+                                <option value="22">2022</option>
+                                <option value="23">2023</option>
+                                <option value="24">2024</option>
+                                <option value="25">2025</option>
+                                <option value="26">2026</option>
+                            </select>
+
+                            <label for="cvv">CVV:</label>
+                            <input id="cvv" name="card_verification" type="text" value="">
+                        </div>
+                    </div>
+
+                    <br>
+                    <input id="go_to_four" type="button" value="Complete">
+
+                    <!-- all other fields -->
+                </form>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.33 33.34">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #7a9779;
+      }
+
+      .cls-2 {
+        fill: #b2c1a1;
+      }
+    </style>
+  </defs>
+  <title>login_1</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <g>
+          <circle class="cls-1" cx="10" cy="6" r="6"/>
+          <path class="cls-1" d="M9.66,14.12h1a8.67,8.67,0,0,1,8.67,8.67V31A2.31,2.31,0,0,1,17,33.34H2.75A1.75,1.75,0,0,1,1,31.59V22.79A8.66,8.66,0,0,1,9.66,14.12Z"/>
+        </g>
+        <g>
+          <circle class="cls-2" cx="9" cy="6" r="6"/>
+          <path class="cls-2" d="M8.66,14.12h1a8.67,8.67,0,0,1,8.67,8.67V31A2.31,2.31,0,0,1,16,33.34H1.75A1.75,1.75,0,0,1,0,31.59V22.79a8.66,8.66,0,0,1,8.66-8.66Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
